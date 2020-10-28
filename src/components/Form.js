@@ -1,57 +1,88 @@
-import React from 'react'
-import {Form, Col, Button} from 'react-bootstrap'
-export default function customForm() {
-    return ( 
-      <Form>
-      <Form.Row>
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
-    
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-      </Form.Row>
-    
-      <Form.Group controlId="formGridAddress1">
-        <Form.Label>Address</Form.Label>
-        <Form.Control placeholder="1234 Main St" />
-      </Form.Group>
-    
-      <Form.Group controlId="formGridAddress2">
-        <Form.Label>Address 2</Form.Label>
-        <Form.Control placeholder="Apartment, studio, or floor" />
-      </Form.Group>
-    
-      <Form.Row>
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>City</Form.Label>
-          <Form.Control />
-        </Form.Group>
-    
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Form.Control as="select" defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>...</option>
-          </Form.Control>
-        </Form.Group>
-    
-        <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control />
-        </Form.Group>
-      </Form.Row>
-    
-      <Form.Group id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-    
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
-        )
+import React from 'react';
+
+export default function Box(props) {
+    return (
+      <div className="form-container bg-dark p-5">
+        <form className="card bg-dark text-light p-5">
+        <div className="row">
+        <div className="form-group col-md-5">
+          <label for="text">Username</label> 
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <i className="fa fa-user"></i>
+              </div>
+            </div>  
+            <input id="text" name="text" placeholder="Enter Username" type="text" className="form-control" />
+          </div>
+        </div>
+        <div className="col-md-2"></div>
+        <div className="form-group col-md-5">
+          <label for="email">Email</label> 
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <i className="fa fa-envelope"></i>
+              </div>
+            </div> 
+            <input id="email" name="email" placeholder="Enter Email" type="text" className="form-control" />
+          </div>
+        </div>
+        {/* user and email end */}
+        </div>
+​
+        <div className="form-group">
+        {/* Address start*/}
+          <label for="address">Address</label> 
+          <div className="input-group">
+            <div className="input-group-prepend">
+              <div className="input-group-text">
+                <i className="fa fa-home"></i>
+              </div>
+            </div> 
+            <textarea id="address" name="address" placeholder="Street, Number, City, Zip" type="text" className="form-control" />
+          </div>
+          {/* Address end */}
+        </div>
+​
+        <div className="row">
+        <div className="form-group col-md-5">
+          <label for="select">Course</label> 
+          <div>
+            <select id="select" name="select" className="custom-select">
+              <option value="">Select Course</option>
+              <option value="physics">Physics</option>
+              <option value="biology">Biology</option>
+              <option value="nath">Math</option>
+            </select>
+          </div>
+        </div>
+        <div className="col-md-3"></div>
+​
+        <div className="form-group col-md-4">
+          <label>Gender</label> 
+          <div>
+            <div className="custom-control custom-radio custom-control-inline">
+              <input name="gender" id="gender_0" type="radio" className="custom-control-input" value="female" /> 
+              <label for="gender_0" className="custom-control-label">Female</label>
+            </div>
+            <div className="custom-control custom-radio custom-control-inline">
+              <input name="gender" id="gender_1" type="radio" className="custom-control-input" value="male" /> 
+              <label for="gender_1" className="custom-control-label">Male</label>
+            </div>
+            <div className="custom-control custom-radio custom-control-inline">
+              <input name="gender" id="gender_2" type="radio" className="custom-control-input" value="other" /> 
+              <label for="gender_2" className="custom-control-label">Other</label>
+            </div>
+          </div>
+        </div> 
+​
+        </div>
+        
+        <div className="form-group pb-5 pt-2">
+          <button name="submit" type="submit" className="btn btn-primary btn-lg btn-block">Submit</button>
+        </div>
+      </form>
+      </div>
+    );
 }
