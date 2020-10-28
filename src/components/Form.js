@@ -3,8 +3,8 @@ import React from 'react';
 export default function Box(props) {
     return (
       <div className="form-container bg-dark p-5">
-        <form className="card bg-dark text-light p-3">
-        <div className="row p-3 mt-3">
+        <form className="card bg-dark text-light pt-3">
+        <div className="row pt-3">
         <div className="form-group col-md-4 text-center">
           <label for="text">Username</label> 
           <div className="input-group ">
@@ -13,7 +13,7 @@ export default function Box(props) {
                 <i className="fa fa-user "></i>
               </div>
             </div>  
-            <input id="text" name="text" placeholder="Enter Username" type="text" className="form-control bg-dark text-light border-0" />
+            <input id="text" name="text" placeholder="Enter Username" type="text" className="form-control bg-dark text-light border-0 text-center"/>
           </div>
         </div>
         <div className="form-group col-md-4 text-center">
@@ -24,7 +24,7 @@ export default function Box(props) {
                 <i className="fa fa-envelope"></i>
               </div>
             </div> 
-            <input id="email" name="email" placeholder="Enter Email" type="text" className="form-control bg-dark text-light border-0" />
+            <input id="email" name="email" placeholder="Enter Email" type="text" className="form-control bg-dark text-light border-0 text-center" />
           </div>
         </div>
         <div className="form-group col-md-4 text-center">
@@ -35,12 +35,12 @@ export default function Box(props) {
                 <i className="fa fa-home"></i>
               </div>
             </div> 
-            <input id="address" name="address" placeholder="Street, Number, City, Zip" type="text" className="form-control bg-dark text-light border-0" />
+            <input id="address" name="address" placeholder="Street, Number, City, Zip" type="text" className="form-control bg-dark text-light border-0 text-center" />
           </div>
         </div>
         </div>
 ​
-        <div className="row px-3">
+        <div className="row px-3 mt-0 pt-0">
         <div className="form-group col-md-12 text-center">
           <label for="select">Course</label> 
           <div>
