@@ -3,51 +3,48 @@ import React from 'react';
 export default function Box(props) {
     return (
       <div className="form-container bg-dark p-5">
-        <form className="card bg-dark text-light p-5">
-        <div className="row">
-        <div className="form-group col-md-6">
+        <form className="card bg-dark text-light p-3">
+        <div className="row p-3 mt-3">
+        <div className="form-group col-md-4 text-center">
           <label for="text">Username</label> 
-          <div className="input-group">
+          <div className="input-group ">
             <div className="input-group-prepend">
-              <div className="input-group-text">
-                <i className="fa fa-user"></i>
+              <div className="input-group-text bg-dark text-light border-0">
+                <i className="fa fa-user "></i>
               </div>
             </div>  
-            <input id="text" name="text" placeholder="Enter Username" type="text" className="form-control" />
+            <input id="text" name="text" placeholder="Enter Username" type="text" className="form-control bg-dark text-light border-0" />
           </div>
         </div>
-        <div className="form-group col-md-6">
+        <div className="form-group col-md-4 text-center">
           <label for="email">Email</label> 
           <div className="input-group">
             <div className="input-group-prepend">
-              <div className="input-group-text">
+              <div className="input-group-text bg-dark text-light border-0">
                 <i className="fa fa-envelope"></i>
               </div>
             </div> 
-            <input id="email" name="email" placeholder="Enter Email" type="text" className="form-control" />
+            <input id="email" name="email" placeholder="Enter Email" type="text" className="form-control bg-dark text-light border-0" />
           </div>
         </div>
-        {/* user and email end */}
-        </div>
-​
-
-​
-        <div className="row">
-        <div className="form-group col-md-6">
-          <label for="address">Address</label> 
+        <div className="form-group col-md-4 text-center">
+          <label for="address ">Address</label> 
           <div className="input-group">
             <div className="input-group-prepend">
-              <div className="input-group-text">
+              <div className="input-group-text bg-dark text-light border-0">
                 <i className="fa fa-home"></i>
               </div>
             </div> 
-            <input id="address" name="address" placeholder="Street, Number, City, Zip" type="text" className="form-control" />
+            <input id="address" name="address" placeholder="Street, Number, City, Zip" type="text" className="form-control bg-dark text-light border-0" />
           </div>
         </div>
-        <div className="form-group col-md-6">
+        </div>
+​
+        <div className="row px-3">
+        <div className="form-group col-md-12 text-center">
           <label for="select">Course</label> 
           <div>
-            <select id="select" name="select" className="custom-select">
+            <select id="select" name="select" className="custom-select bg-light text-dark border-0 text-center">
               <option value="">Select Course</option>
               <option value="physics">Physics</option>
               <option value="biology">Biology</option>
@@ -72,14 +69,10 @@ export default function Box(props) {
               <label for="gender_2" className="custom-control-label">Other</label>
             </div>
           </div>
-        </div> 
-​
+          <button name="submit" type="submit" className=" mt-3 btn btn-outline-success btn-lg btn-block">Submit</button>
         </div>
-        
-        <div className="form-group pb-5 pt-2">
-          <button name="submit" type="submit" className="btn btn-primary btn-lg btn-block">Submit</button>
-        </div>
-      </form>
       </div>
-    );
+      </form>
+  </div>
+  );
 }
