@@ -5,7 +5,7 @@ export default function Box(props) {
       <div className="form-container bg-dark p-5">
         <form className="card bg-dark text-light p-5">
         <div className="row">
-        <div className="form-group col-md-5">
+        <div className="form-group col-md-6">
           <label for="text">Username</label> 
           <div className="input-group">
             <div className="input-group-prepend">
@@ -16,8 +16,7 @@ export default function Box(props) {
             <input id="text" name="text" placeholder="Enter Username" type="text" className="form-control" />
           </div>
         </div>
-        <div className="col-md-2"></div>
-        <div className="form-group col-md-5">
+        <div className="form-group col-md-6">
           <label for="email">Email</label> 
           <div className="input-group">
             <div className="input-group-prepend">
@@ -31,8 +30,10 @@ export default function Box(props) {
         {/* user and email end */}
         </div>
 ​
-        <div className="form-group">
-        {/* Address start*/}
+
+​
+        <div className="row">
+        <div className="form-group col-md-6">
           <label for="address">Address</label> 
           <div className="input-group">
             <div className="input-group-prepend">
@@ -40,13 +41,10 @@ export default function Box(props) {
                 <i className="fa fa-home"></i>
               </div>
             </div> 
-            <textarea id="address" name="address" placeholder="Street, Number, City, Zip" type="text" className="form-control" />
+            <input id="address" name="address" placeholder="Street, Number, City, Zip" type="text" className="form-control" />
           </div>
-          {/* Address end */}
         </div>
-​
-        <div className="row">
-        <div className="form-group col-md-5">
+        <div className="form-group col-md-6">
           <label for="select">Course</label> 
           <div>
             <select id="select" name="select" className="custom-select">
@@ -57,9 +55,8 @@ export default function Box(props) {
             </select>
           </div>
         </div>
-        <div className="col-md-3"></div>
 ​
-        <div className="form-group col-md-4">
+        <div className="form-group col-md-12 text-center">
           <label>Gender</label> 
           <div>
             <div className="custom-control custom-radio custom-control-inline">
